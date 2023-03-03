@@ -1,6 +1,7 @@
 FROM python:3.9-slim-buster
+LABEL org.opencontainers.image.source https://github.com/Crypto-Lab-tk/ContainerSentry
 
-WORKDIR /apps/DockerMonitor
+WORKDIR /apps/ContainerSentry
 
 COPY . .
 
