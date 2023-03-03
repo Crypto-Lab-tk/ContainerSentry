@@ -1,4 +1,7 @@
 # Container Sentry
+
+[![Docker Image Deploy](https://github.com/Crypto-Lab-tk/ContainerSentry/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Crypto-Lab-tk/ContainerSentry/actions/workflows/docker-image.yml)
+
 ## Introduction
 
 This is a Docker monitoring application that searches for patterns in the logs of running Docker containers and sends a message to a Telegram chat if a pattern is found. The application requires a Docker daemon to be running on the host machine and a Telegram bot to be set up with a valid token and chat ID.
