@@ -1,30 +1,30 @@
 {
-  "containers": {
-    "container_name_1": {
-      "patterns": [
-        {
-          "pattern": "error",
-          "message": "Error occurred in container_name_1",
-          "status": "active",
-          "last_notification": None
-        }
-      ]
-    },
-    "container_name_2": {
-      "patterns": [
-        {
-          "pattern": "warning",
-          "message": "Warning occurred in container_name_2",
-          "status": "active",
-          "last_notification": None
+    "containers": {
+        "container_name_1": {
+            "patterns": [
+                {
+                    "pattern": "error",
+                    "message": "Error occured in container",
+                    "status": "active",
+                    "last_notification": ""
+                }
+            ]
         },
-        {
-          "pattern": "critical",
-          "message": "Critical occurred in container_name_2",
-          "status": "active",
-          "last_notification": None
+        "container_name_2": {
+            "patterns": [
+                {
+                    "pattern": "warning",
+                    "message": "Warning occurred in container_name_2",
+                    "status": "active",
+                    "last_notification": ""
+                },
+                {
+                    "pattern": "critical",
+                    "message": "Critical occurred in container_name_2",
+                    "status": "active",
+                    "last_notification": ""
+                }
+            ]
         }
-      ]
     }
-  }
 }

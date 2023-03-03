@@ -1,7 +1,7 @@
 {
   "docker_socket": "/var/run/docker.sock",
   "telegram": {
-    "token": "5547753093:AAEjaFfMK7qV4O63WOUI-ncJKdZnl3s7zqg",
-    "chat_id": "1966135285"
+    "token": "sometoken",
+    "chat_id": "someid"
   }
 }

@@ -2,6 +2,7 @@ import docker
 import json
 import requests
 import time
+from time import sleep
 
 
 def send_telegram_message(message, telegram_config):
@@ -42,12 +43,13 @@ def main():
                 patterns = config['patterns']
                 container_logs = container.logs().decode('utf-8')
                 for pattern in patterns:
+                    container_logs = '\n'.join(container_logs.splitlines()[-10:])
                     if pattern['pattern'] in container_logs:
                         message = pattern['message']
                         status = pattern['status']
                         last_notification = pattern['last_notification']
                         # Определяем, нужно ли отправлять уведомление
-                        if status == "active" and (not last_notification or time.time() - last_notification > 3600):
+                        if status == "active" and (not last_notification or time.time() - last_notification > 360):
                             send_telegram_message(message, telegram_config)
                             pattern['last_notification'] = time.time()
                             with open('containers-config.json', 'w') as f:
@@ -55,4 +57,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    while True:
+        main()
+        sleep(2)
